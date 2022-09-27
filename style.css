@@ -47,8 +47,16 @@ body {
 .card, .card footer a {
     border-radius: 10px;
 }
+.card {
+    width: 800px;
+    height: 600px;
+}
+.card .image, .card .product {
+    width: 50%;
+    height: 400px;
+}
 .card .image {
-    background-image: url("images/image-product-desktop.jpg");
+    background-image: url("/images/image-product-desktop.jpg");
     background-position: center;
     background-size: cover;
     border-radius: 10px 0px 0px 10px;
@@ -58,33 +66,22 @@ body {
     padding: 15px;
     border-radius: 0px 10px 10px 0px;
 }
-.card .description {
-    /* padding-bottom: 1.2em; */
-}
-.prices {
-    padding: 0.5em;
-}
-.card header {
-
-}
-.card main {
-
-}
-.card footer {
-
-}
 .card header h4 {
     font-family: 'Fraunces', sans-serif;
-    font-size: 2em;
+    font-size: 2.35em;
+    padding-right: 2em;
 }
 .subtitle {
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: .5em;
 }
 .card p {
     font-size: 14px;
     line-height: 1.5;
     color: var(--dark-grayish-blue);
+}
+.prices {
+    padding: 0.5em;
 }
 .card .discount {
     font-family: 'Fraunces', serif;
@@ -106,18 +103,7 @@ body {
 
 
 /* Media queries */
-@media (max-width: 1440px) {
-    .card {
-        display: flex;
-        width: 800px;
-        height: 600px;
-    }
-    .card .image, .card .product {
-        width: 50%;
-        height: 400px;
-    }
-}
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
     .card {
         flex-direction: column;
         width: 300px;
@@ -134,6 +120,10 @@ body {
         border-radius: 10px 10px 0px 0px;
     }
     .card .image {
-        background-image: url("images/image-product-mobile.jpg");
+        background-image: url("/images/image-product-mobile.jpg");
+    }
+    .card header h4 {
+        font-size: 2em;
+        padding-right: inherit;
     }
 }
