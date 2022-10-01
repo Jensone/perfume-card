@@ -107,7 +107,7 @@ body {
 
 
 /* Media queries */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 475px) {
     .card {
         flex-direction: column;
         width: 300px;
